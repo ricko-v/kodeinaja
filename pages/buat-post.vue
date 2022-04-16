@@ -271,7 +271,7 @@ username: ${this.username}
 
 ${easymde.value()}
 `
-            let url = `https://github.com/ricko-v/katanime/new/master/static/new?filename=${slug}.md&value=${konten}`;
+            let url = `https://github.com/ricko-v/kodeinaja/new/master/content/posts/new?filename=${slug}.md&value=${konten}`;
             window.open(encodeURI(url), '_self');
             this.clearStorage();
         },
