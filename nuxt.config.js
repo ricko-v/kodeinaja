@@ -19,10 +19,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/kodeinaja/favicon.ico' },
-      { rel: 'stylesheet', href: '/kodeinaja/easymde/src/easymde.min.css' }
+      { rel: 'stylesheet', href: '/kodeinaja/easymde/src/css/easymde.min.css' }
     ],
     script: [
-      { src: '/kodeinaja/easymde/src/easymde.min.js' }
+      { src: '/kodeinaja/easymde/src/js/easymde.min.js' }
     ]
   },
 
