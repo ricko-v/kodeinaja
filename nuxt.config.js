@@ -2,7 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   router: {
-    base: '/kodeinaja'
+    base: '/kodeinaja/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -18,17 +18,17 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/style.css' },
-      { rel: 'stylesheet', href: '/easymde/dist/easymde.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/kodeinaja/favicon.ico' },
+      { rel: 'stylesheet', href: '/kodeinaja/easymde/dist/easymde.min.css' }
     ],
     script: [
-      { src: '/easymde/dist/easymde.min.js' }
+      { src: '/kodeinaja/easymde/dist/easymde.min.js' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/static/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
