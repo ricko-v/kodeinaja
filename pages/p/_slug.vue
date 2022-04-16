@@ -48,14 +48,53 @@
 export default {
     async asyncData({
         $content,
-        params
+        params,
+        redirect
     }) {
         const posts = await $content('posts').where({
             slug: params.slug
         }).fetch()
 
+        if(posts.length == 0) {
+            redirect('/');
+        }
+
         return {
             posts
+        }
+    },
+
+    head() {
+        return {
+            title: this.posts[0].title,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: this.posts[0].description
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: this.posts[0].title
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: this.posts[0].description
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: this.posts[0].title
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: this.posts[0].description
+                }
+            ]
         }
     },
 

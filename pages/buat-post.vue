@@ -62,6 +62,40 @@ export default {
         }
     },
 
+    head() {
+        return {
+            title: `Buat Postingan - Kodeinaja`,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: `Ayo berkontribusi di kodeinaja.`
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: `Buat Postingan - Kodeinaja`
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: `Ayo berkontribusi di kodeinaja.`
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: `Buat Postingan - Kodeinaja`
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: `Ayo berkontribusi di kodeinaja.`
+                }
+            ]
+        }
+    },
+
     mounted() {
         let easymde = new EasyMDE({
             element: document.querySelectorAll('#my-editor')[0],

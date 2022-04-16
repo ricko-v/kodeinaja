@@ -3,6 +3,10 @@ body {
     scroll-behavior: smooth !important;
 }
 
+* {
+    outline: none !important;
+}
+
 button,
 input {
     outline: none !important;

@@ -94,7 +94,7 @@ export default {
     }) {
         let github, kosong;
         let n = 1;
-        
+
         const posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'tag']).where({
             username: params.username
         }).sortBy('createdAt', 'desc').fetch()
@@ -114,6 +114,40 @@ export default {
             github,
             kosong,
             n
+        }
+    },
+
+    head() {
+        return {
+            title: `${this.$route.params.username} - Kodeinaja`,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: `Daftar postingan dari ${this.$route.params.username}`
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: `${this.$route.params.username} - Kodeinaja`
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: `Daftar postingan dari ${this.$route.params.username}`
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: `${this.$route.params.username} - Kodeinaja`
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: `Daftar postingan dari ${this.$route.params.username}`
+                }
+            ]
         }
     },
 

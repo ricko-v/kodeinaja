@@ -63,6 +63,40 @@ export default {
         }
     },
 
+    head() {
+        return {
+            title: `Arsip Postingan - Kodeinaja`,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: `Arsip postingan dari tahun ke tahun.`
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: `Arsip Postingan - Kodeinaja`
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: `Arsip postingan dari tahun ke tahun.`
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: `Arsip Postingan - Kodeinaja`
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: `Arsip postingan dari tahun ke tahun.`
+                }
+            ]
+        }
+    },
+
     methods: {
         gachaWarna() {
             let warna = ['primary', 'warning', 'danger', 'success'];

@@ -7,7 +7,7 @@
                 <div class='col-lg-2'></div>
                 <div v-if='!kosong' class='col-lg-8 p-0 mb-5'>
                     <div class='card shadow-sm p-3'>
-                        <h3 class=''>Tag Post - {{ $route.params.tag }}</h3>
+                        <h3 class=''><span class='font-weight-bold'>Tag Post</span> - {{ $route.params.tag }}</h3>
                     </div>
 
                     <div class='mt-5 pt-5'>
@@ -75,6 +75,40 @@ export default {
             posts,
             kosong,
             n
+        }
+    },
+
+    head() {
+        return {
+            title: `Tag ${this.$route.params.tag} - Kodeinaja`,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: `Daftar postingan tag ${this.$route.params.tag}`
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: `Tag ${this.$route.params.tag} - Kodeinaja`
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: `Daftar postingan tag ${this.$route.params.tag}`
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: `Tag ${this.$route.params.tag} - Kodeinaja`
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: `Daftar postingan tag ${this.$route.params.tag}`
+                }
+            ]
         }
     },
 

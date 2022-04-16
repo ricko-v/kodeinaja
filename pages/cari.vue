@@ -57,6 +57,40 @@ export default {
         }
     },
 
+    head() {
+        return {
+            title: `Cari Postingan - Kodeinaja`,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: `Mesin pencari postingan di kodeinaja.`
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: `Cari Postingan - Kodeinaja`
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: `Mesin pencari postingan di kodeinaja.`
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: `Cari Postingan - Kodeinaja`
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: `Mesin pencari postingan di kodeinaja.`
+                }
+            ]
+        }
+    },
+
     methods: {
         cari() {
             this.$router.push({

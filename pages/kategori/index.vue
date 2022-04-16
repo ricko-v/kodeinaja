@@ -56,6 +56,40 @@ export default {
         }
     },
 
+    head() {
+        return {
+            title: "Kategori Post - Kodeinaja",
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: "Daftar kategori postingan kodeinaja"
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: "Kategori Post - Kodeinaja"
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: "Daftar kategori postingan kodeinaja"
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: "Kategori Post - Kodeinaja"
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: "Daftar kategori postingan kodeinaja"
+                }
+            ]
+        }
+    },
+
     methods: {
         gachaWarna() {
             let warna = ['primary', 'warning', 'danger', 'success'];

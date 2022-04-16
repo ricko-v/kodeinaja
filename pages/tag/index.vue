@@ -9,7 +9,7 @@
                     <div class='card shadow-sm p-3'>
                         <h1 class='font-weight-bold'>Tag Post</h1>
                         <div class='mt-3'>
-                            <NuxtLink v-for="(value, name, index) in kategori" :key='name' :to="'/tag/'+name">
+                            <NuxtLink v-for="(value, name, index) in tag" :key='name' :to="'/tag/'+name">
                                 <b-button :variant="gachaWarna()" class='font-weight-bold mr-3 mb-3'>
                                     {{ name }}
                                     <b-badge variant="light">{{ value.length }}</b-badge>
@@ -34,25 +34,59 @@ export default {
     }) {
         const posts = await $content('posts').only(['tag', 'title']).fetch();
 
-        let kategori = {};
+        let tag = {};
 
         for (let i in posts) {
             for (let l in posts[i].tag) {
-                kategori[posts[i].tag[l]] = [];
+                tag[posts[i].tag[l]] = [];
             }
         }
 
-        let keys = Object.keys(kategori);
+        let keys = Object.keys(tag);
 
         for (let a = 0; a < posts.length; a++) {
             for (let b = 0; b < posts[a].tag.length; b++) {
-                kategori[posts[a].tag[b]].push(posts[a].title)
+                tag[posts[a].tag[b]].push(posts[a].title)
             }
         }
 
         return {
             posts,
-            kategori
+            tag
+        }
+    },
+
+    head() {
+        return {
+            title: "Tag Post - Kodeinaja",
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: "Daftar tag postingan kodeinaja"
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: "Tag Post - Kodeinaja"
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: "Daftar tag postingan kodeinaja"
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: "Tag Post - Kodeinaja"
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: "Daftar tag postingan kodeinaja"
+                }
+            ]
         }
     },
 

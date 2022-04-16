@@ -7,7 +7,7 @@
                 <div class='col-lg-2'></div>
                 <div v-if='!kosong' class='col-lg-8 p-0 mb-5'>
                     <div class='card shadow-sm p-3'>
-                        <h3 class=''>Kategori Post - {{ $route.params.kategori }}</h3>
+                        <h3><span class='font-weight-bold'>Kategori Post</span> - {{ $route.params.kategori }}</h3>
                     </div>
 
                     <div class='mt-5 pt-5'>
@@ -20,8 +20,8 @@
                         </NuxtLink>
 
                         <div class='d-flex overflow-auto mt-1'>
-                            <NuxtLink v-for='tag in p.tag' :key='tag' :to="'/tag/'+tag" :class='"bg-"+gachaWarna()' class='px-2 mr-2 pb-1 text-white rounded'>
-                                <small class='font-weight-bold'>{{ tag }}</small>
+                            <NuxtLink v-for='category in p.category' :key='category' :to="'/category/'+category" :class='"bg-"+gachaWarna()' class='px-2 mr-2 pb-1 text-white rounded'>
+                                <small class='font-weight-bold'>{{ category }}</small>
                             </NuxtLink>
                         </div>
 
@@ -60,7 +60,7 @@ export default {
         $content,
         params
     }) {
-        let posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'category', 'tag']).sortBy('createdAt', 'desc').fetch();
+        let posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'category', 'category']).sortBy('createdAt', 'desc').fetch();
 
         let kosong;
         let n = 1;
@@ -77,6 +77,40 @@ export default {
         }
     },
 
+    head() {
+        return {
+            title: `Kategori ${this.$route.params.kategori} - Kodeinaja`,
+            meta: [{
+                    hid: 'description',
+                    name: 'description',
+                    content: `Daftar postingan kategori ${this.$route.params.kategori}`
+                },
+                // Open Graph
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: `Kategori ${this.$route.params.kategori} - Kodeinaja`
+                },
+                {
+                    hid: 'og:description',
+                    property: 'og:description',
+                    content: `Daftar postingan kategori ${this.$route.params.kategori}`
+                },
+                // Twitter Card
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: `Kategori ${this.$route.params.kategori} - Kodeinaja`
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: `Daftar postingan kategori ${this.$route.params.kategori}`
+                }
+            ]
+        }
+    },
+
     methods: {
         gachaWarna() {
             let warna = ['dark', 'warning', 'danger', 'success'];
@@ -86,7 +120,7 @@ export default {
         },
 
         async infiniteScroll($state) {
-            let dataBaru = await this.$content('posts').skip(7 * this.n).limit(7).only(['title', 'slug', 'createdAt', 'username', 'category', 'description', 'tag']).sortBy('createdAt', 'desc').fetch();
+            let dataBaru = await this.$content('posts').skip(7 * this.n).limit(7).only(['title', 'slug', 'createdAt', 'username', 'category', 'description', 'category']).sortBy('createdAt', 'desc').fetch();
             this.n++;
 
             if (dataBaru.length == 0) {
