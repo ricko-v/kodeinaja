@@ -20,7 +20,7 @@
                         </NuxtLink>
 
                         <div class='d-flex overflow-auto mt-1'>
-                            <NuxtLink v-for='category in p.category' :key='category' :to="'/category/'+category" :class='"bg-"+gachaWarna()' class='px-2 mr-2 pb-1 text-white rounded'>
+                            <NuxtLink v-for='category in p.category' :key='category' :to="'/kategori/'+category" :class='"bg-"+gachaWarna()' class='px-2 mr-2 pb-1 text-white rounded'>
                                 <small class='font-weight-bold'>{{ category }}</small>
                             </NuxtLink>
                         </div>
