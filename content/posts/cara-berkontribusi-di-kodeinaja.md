@@ -23,9 +23,9 @@ Artinya dengan github, teman-teman dapat mengupload dan memanajemen projek, berk
 Untuk mendaftarnya, teman-teman dapat mengunjungi website [https://github.com/signup](https://github.com/signup) dan ikuti langkah-langkah pendaftarannya.
 
 ## Menulis Postingan
-Langkah selanjutnya adalah dengan melakukan fork dan pull request ke repositori github [kodeinaja](https://github.com/ricko-v/kodeinaja). Atau jika teman-teman masih belum paham mengenai fork dan pull request, teman-teman dapat menulis postingan melalui [form](https://ricko-v.github.io/kodeinaja/buat-post).
+Langkah selanjutnya adalah dengan melakukan fork dan pull request ke repositori github [kodeinaja](https://github.com/ricko-v/kodeinaja). Atau jika teman-teman masih belum paham mengenai fork dan pull request, teman-teman dapat menulis postingan melalui [form](https://kodeinaja.vercel.app/buat-post).
 
-Lalu, tuliskan data postingan seperti judul, deskripsi, tag, kategori, username github, dan isi postingan. Untuk mengetahui mengenai apa saja isi konten yang didukung, teman-teman dapat mengunjungi postingan [Rich Content](https://ricko-v.github.io/kodeinaja/p/rich-content).
+Lalu, tuliskan data postingan seperti judul, deskripsi, tag, kategori, username github, dan isi postingan. Untuk mengetahui mengenai apa saja isi konten yang didukung, teman-teman dapat mengunjungi postingan [Rich Content](https://kodeinaja.vercel.app/p/rich-content).
 
 Setelah menekan tombol kirim, maka akan ada tampilan seperti berikut:
 
