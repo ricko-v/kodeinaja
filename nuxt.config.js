@@ -16,10 +16,10 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/src/css/easymde.min.css' }
+      { rel: 'stylesheet', href: '/easymde/src/css/easymde.min.css' }
     ],
     script: [
-      { src: '/src/js/easymde.min.js' }
+      { src: '/easymde/src/js/easymde.min.js' }
     ]
   },
 
