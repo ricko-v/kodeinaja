@@ -15,11 +15,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/kodeinaja/favicon.ico' },
-      { rel: 'stylesheet', href: '/kodeinaja/easymde/src/css/easymde.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: '/src/css/easymde.min.css' }
     ],
     script: [
-      { src: '/kodeinaja/easymde/src/js/easymde.min.js' }
+      { src: '/src/js/easymde.min.js' }
     ]
   },
 
