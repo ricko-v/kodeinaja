@@ -31,7 +31,7 @@ Setelah menekan tombol kirim, maka akan ada tampilan seperti berikut:
 
 ![Fork Repo](https://iili.io/VWROyG.png)
 
-Teman-teman tinggal menekan tombol "Fork this repository", lalu scroll kebawah dan tekan tombol "Commit new file".
+Teman-teman tinggal menekan tombol "Fork this repository", lalu scroll kebawah dan tekan tombol "Propose new file". Dan yang terakhir, tekan tombol "Create pull request".
 
 ## Kesimpulan
 Nah, itu tadi adalah langkah-langkah cara berkontribusi di website kodeinaja ini. Apabila teman-teman masih belum mengerti, bisa bertanya kepada saya. Sekian, terimakasih.

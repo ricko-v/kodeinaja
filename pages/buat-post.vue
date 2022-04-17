@@ -260,8 +260,7 @@ export default {
             });
 
             const slug = this.generateSlug(this.judul);
-            const konten = `
----
+            const konten = `---
 title: ${this.judul}
 description: ${this.deskripsi}
 tag: ${this.generateArr(this.tag)}
