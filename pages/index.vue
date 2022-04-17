@@ -13,7 +13,7 @@
                             <br>
                             Teman-teman juga dapat berkontribusi dalam blog ini dengan melakukan
                             <br>
-                            pull request ke <a href='' target='_blank'>github.</a>
+                            pull request ke <a href='https://github.com/ricko-v/kodeinaja' target='_blank'>github</a> atau bisa menggunakan form <NuxtLink to='/buat-post'>berikut</NuxtLink>.
                         </p>
                         <p class='m-0'><i>~ Learn, Write, Share ~</i></p>
                     </div>
