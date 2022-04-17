@@ -2,7 +2,8 @@ name: cd
 
 on: [push, pull_request]
 
-permissions: read-all|write-all
+permissions:
+  pull-requests: read|write|none
 
 jobs:
   cd:
