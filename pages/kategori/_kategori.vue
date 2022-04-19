@@ -20,8 +20,8 @@
                         </NuxtLink>
 
                         <div class='d-flex overflow-auto mt-1'>
-                            <NuxtLink v-for='category in p.category' :key='category' :to="'/kategori/'+category" :class='"bg-"+gachaWarna()' class='px-2 mr-2 pb-1 text-white rounded'>
-                                <small class='font-weight-bold'>{{ category }}</small>
+                            <NuxtLink v-for='tag in p.tag' :key='tag' :to="'/tag/'+tag" :class='"bg-"+gachaWarna()' class='px-2 mr-2 pb-1 text-white rounded'>
+                                <small class='font-weight-bold'>{{ tag }}</small>
                             </NuxtLink>
                         </div>
 
@@ -60,15 +60,23 @@ export default {
         $content,
         params
     }) {
-        let posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'category', 'category']).sortBy('createdAt', 'desc').fetch();
+        let posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'category', 'tag']).sortBy('createdAt', 'desc').fetch();
 
-        let kosong;
+        let kosong = [];
         let n = 1;
 
-        let pilter = posts.filter(x => {
-            let par = params.kategori;
-            let cek = x.category.filter(c => c == par).length ? kosong = false : kosong = true;
-        });
+        for(let i in posts) {
+            let cheking = posts[i].category.find(x => x == params.kategori);
+            if (cheking) {
+                kosong.push(0);
+            }
+        }
+
+        if(kosong.length == 0) {
+            kosong = true;
+        } else {
+            kosong = false;
+        }
 
         return {
             posts,

@@ -13,7 +13,6 @@
                     <div class='mt-5 pt-5'>
                         <hr class='border border-secondary'>
                     </div>
-
                     <div v-for='p in posts' :key='p.title' v-if="p.tag.find(x => x == $route.params.tag)" class='card shadow-sm p-3 mt-5'>
                         <NuxtLink :to="'/p/'+p.slug">
                             <h4 class='font-weight-bold'>{{ p.title }}</h4>
@@ -63,13 +62,21 @@ export default {
         let posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'tag'])
             .sortBy('createdAt', 'desc').fetch();
 
-        let kosong;
+        let kosong = [];
         let n = 1;
+        
+        for(let i in posts) {
+            let cheking = posts[i].tag.find(x => x == params.tag);
+            if (cheking) {
+                kosong.push(0);
+            }
+        }
 
-        let pilter = posts.filter(x => {
-            let par = params.tag;
-            let cek = x.tag.filter(c => c == par).length ? kosong = false : kosong = true;
-        });
+        if(kosong.length == 0) {
+            kosong = true;
+        } else {
+            kosong = false;
+        }
 
         return {
             posts,

@@ -7,7 +7,10 @@
                 <div class='col-lg-2'></div>
                 <div class='col-lg-8 p-0 mb-5'>
                     <div class='card shadow-sm p-3'>
-                        <h3 class='font-weight-bold'>Buat Postingan</h3>
+                        <div class='d-flex justify-content-between'>
+                            <h3 class='font-weight-bold'>Buat Postingan</h3>
+                            <button @click='clearStorage' class='btn btn-outline-danger shadow-none'>Clear</button>
+                        </div>
                         <hr>
                         <div class='mt-4'>
                             <div>
@@ -128,36 +131,36 @@ export default {
     },
 
     watch: {
-        judul: function(val) {
-            if(!localStorage.smde_judul) {
+        judul: function (val) {
+            if (!localStorage.smde_judul) {
                 localStorage.smde_judul = val;
             } else {
                 localStorage.smde_judul = val;
             }
         },
-        deskripsi: function(val) {
-            if(!localStorage.smde_deskripsi) {
+        deskripsi: function (val) {
+            if (!localStorage.smde_deskripsi) {
                 localStorage.smde_deskripsi = val;
             } else {
                 localStorage.smde_deskripsi = val;
             }
         },
-        tag: function(val) {
-            if(!localStorage.smde_tag) {
+        tag: function (val) {
+            if (!localStorage.smde_tag) {
                 localStorage.smde_tag = val;
             } else {
                 localStorage.smde_tag = val;
             }
         },
-        kategori: function(val) {
-            if(!localStorage.smde_kategori) {
+        kategori: function (val) {
+            if (!localStorage.smde_kategori) {
                 localStorage.smde_kategori = val;
             } else {
                 localStorage.smde_kategori = val;
             }
         },
-        username: function(val) {
-            if(!localStorage.smde_username) {
+        username: function (val) {
+            if (!localStorage.smde_username) {
                 localStorage.smde_username = val;
             } else {
                 localStorage.smde_username = val;
@@ -270,17 +273,16 @@ username: ${this.username}
 
 ${easymde.value()}
 `
-            let url = `https://github.com/ricko-v/kodeinaja/new/master/content/posts/new?filename=${slug}.md&value=${konten}`;
-            window.open(encodeURI(url), '_self');
-            this.clearStorage();
+            let url = `https://github.com/ricko-v/kodeinaja/new/master/content/posts/new?filename=${slug}.md&value=${encodeURIComponent(konten)}`;
+            window.open(url, '_self');
         },
 
         generateArr(str) {
             let a = str.split(',');
             let b = '[';
 
-            for(let i = 0; i < a.length; i++) {
-                if(i == a.length-1) {
+            for (let i = 0; i < a.length; i++) {
+                if (i == a.length - 1) {
                     b += `"${a[i].trim()}"]`;
                 } else {
                     b += `"${a[i].trim()}",`;
@@ -291,16 +293,50 @@ ${easymde.value()}
         },
 
         generateSlug(judul) {
-            return judul.toLowerCase().replace(/[' ']/g, '-');            
+            return judul.toLowerCase().replace(/[' ']/g, '-');
         },
 
         clearStorage() {
-            localStorage.smde_kodeinaja = '';
-            localStorage.smde_judul = '';
-            localStorage.smde_deskripsi = '';
-            localStorage.smde_tag = '';
-            localStorage.smde_kategori = '';
-            localStorage.smde_username = '';
+            let tanya = confirm("Data postingan akan dihapus, lanjutkan?");
+            if (tanya) {
+                localStorage.smde_kodeinaja = '';
+                localStorage.smde_judul = '';
+                localStorage.smde_deskripsi = '';
+                localStorage.smde_tag = '';
+                localStorage.smde_kategori = '';
+                localStorage.smde_username = '';
+                this.judul = '';
+                this.deskripsi = '';
+                this.tag = '';
+                this.kategori = '';
+                this.username = '';
+                let list = document.querySelectorAll('.EasyMDEContainer');
+                for (const element of list) {
+                    element.remove()
+                }
+
+                let easymde = new EasyMDE({
+                    element: document.querySelectorAll('#my-editor')[0],
+                    autosave: {
+                        enabled: true,
+                        uniqueId: "kodeinaja",
+                        delay: 500,
+                        submit_delay: 5000,
+                        timeFormat: {
+                            locale: 'en-US',
+                            format: {
+                                year: 'numeric',
+                                month: 'long',
+                                day: '2-digit',
+                                hour: '2-digit',
+                                minute: '2-digit',
+                            },
+                        },
+                        text: "Autosaved: "
+                    },
+                    placeholder: "Ayo menulis..."
+                });
+            }
         }
     }
 }
