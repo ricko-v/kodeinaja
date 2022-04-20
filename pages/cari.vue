@@ -3,7 +3,7 @@
     <Navbar></Navbar>
     <div class='container-fluid bg-silver pt-5 min-vh-100'>
         <div class='container'>
-            <div class='row'>
+            <div class='row pt-5'>
                 <div class='col-lg-2'></div>
                 <div class='col-lg-8 mb-5 p-0'>
                     <div class='card p-3 shadow-sm'>

@@ -22,6 +22,10 @@
                         <hr class='border border-secondary'>
                     </div>
 
+                    <div class='card shadow-sm p-3 mt-5'>
+                        <h3 class=''><span class='font-weight-bold'>Postingan Terbaru</span></h3>
+                    </div>
+
                     <div v-for='p in posts' :key='p.title' class='card shadow-sm p-3 mt-5'>
                         <NuxtLink :to="'/p/'+p.slug">
                             <h4 class='font-weight-bold'>{{ p.title }}</h4>

@@ -49,14 +49,18 @@ export default {
     async asyncData({
         $content,
         params,
-        redirect
+        redirect,
+        error
     }) {
         const posts = await $content('posts').where({
             slug: params.slug
         }).fetch()
 
-        if(posts.length == 0) {
-            redirect('/');
+        if (posts.length == 0) {
+            error({
+                statusCode: 404,
+                message: '404 Not Found'
+            });
         }
 
         return {
