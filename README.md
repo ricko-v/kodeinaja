@@ -1,7 +1,7 @@
 # Kodeinaja
 Blog sederhana tentang koding atau pemrograman.
 
-# install dependencies
+# install setup
 ```sh
 $ npm install
 
