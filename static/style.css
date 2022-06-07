@@ -78,3 +78,7 @@ th {
 .EasyMDEContainer img {
     max-width: 100% !important;
 }
+
+.table-data {
+    color: white !important;
+}
