@@ -27,7 +27,7 @@ Untuk mendaftarnya, teman-teman dapat mengunjungi website [https://github.com/si
 Langkah selanjutnya adalah dengan melakukan fork dan pull request ke repositori github [kodeinaja](https://github.com/ricko-v/kodeinaja). Atau jika teman-teman masih belum paham mengenai fork dan pull request, teman-teman dapat menulis postingan melalui [form](https://kodeinaja.vercel.app/buat-post).
 
 Lalu, tuliskan data postingan seperti judul, deskripsi, tag, kategori, username github, dan isi postingan. Untuk isi konten, disini menggunakan bahasa markdown yang cukup mudah digunakan. Apabila belum megetahui tentang syntax markdown, bisa dilihat di [Markdown Syntax Guide](https://kodeinaja.vercel.app/p/belajar-markdown-syntax).
-
+ 
 Setelah menekan tombol kirim, maka akan ada tampilan seperti berikut:
 
 ![Fork Repo](https://iili.io/VWROyG.png)
