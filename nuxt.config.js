@@ -45,8 +45,7 @@ export default {
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
     ['nuxt-content-git', {
-      createdAtName: 'gitCreatedAt',
-      updatedAtName: 'gitUpdatedAt',
+      createdAtName: 'gitCreatedAt'
     }],
     '@nuxt/content',
   ],
