@@ -69,7 +69,9 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'KodeInaja'
+      name: 'KodeInaja',
+      short_name: 'KodeInaja',
+      theme_color: '#2F4F4F'
     }
   }
 }
