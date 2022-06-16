@@ -7,7 +7,7 @@
                 <div class='col-lg-2'></div>
                 <div class='col-lg-8 mb-5 p-0'>
                     <div class='card shadow-sm p-3'>
-                        <h1 class='font-weight-bold'>Arsip Post</h1>
+                        <h1 class='font-weight-bold'>Arsip Post 🗂</h1>
                         <div class='mt-3'>
                             <b-card no-body>
                                 <b-tabs card>

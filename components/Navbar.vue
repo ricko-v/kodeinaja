@@ -7,6 +7,12 @@
 
         <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class='ml-auto'>
+                <b-nav-item to="/showcase">
+                    <span :class="[path == '/showcase' ? 'text-dark' : '']">Showcase</span>
+                </b-nav-item>
+                <b-nav-item to="/ngoding">
+                    <span :class="[path == '/ngoding' ? 'text-dark' : '']">Ngoding</span>
+                </b-nav-item>
                 <b-nav-item to="/arsip">
                     <span :class="[path == '/arsip' ? 'text-dark' : '']">Arsip</span>
                 </b-nav-item>

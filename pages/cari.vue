@@ -7,9 +7,10 @@
                 <div class='col-lg-2'></div>
                 <div class='col-lg-8 mb-5 p-0'>
                     <div class='card p-3 shadow-sm'>
-                        <h1 class='font-weight-bold'>Cari Postingan</h1>
+                        <h1 class='font-weight-bold d-flex align-items-center'>Cari Postingan <span class='ml-1'><small>🔍</small></span></h1>
                         <div class='d-flex mt-3 mb-3'>
                             <input v-model='q' class='form-control shadow-none'>
+                            <button @click='cari' class='btn btn-primary ml-3 shadow-none'>Cari</button>
                         </div>
                     </div>
 
@@ -92,10 +93,13 @@ export default {
     },
 
     methods: {
-        cari() {
-            this.$router.push({
-                path: '/cari?q=' + this.q
-            })
+        async cari() {
+            let posts = await this.$content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'tag']).sortBy('createdAt', 'desc').fetch();
+            this.posts = posts;
+
+            if(this.q == "") {
+                this.posts = [];
+            }
         },
 
         gachaWarna() {

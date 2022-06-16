@@ -8,7 +8,7 @@
                 <div class='col-lg-8 p-0 mb-5'>
                     <div class='card shadow-sm p-3'>
                         <div class='d-flex justify-content-between'>
-                            <h3 class='font-weight-bold'>Buat Postingan</h3>
+                            <h3 class='font-weight-bold'>Buat Postingan (Beta)</h3>
                             <button @click='clearStorage' class='btn btn-outline-danger shadow-none'>Clear</button>
                         </div>
                         <hr>

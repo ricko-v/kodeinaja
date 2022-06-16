@@ -20,10 +20,10 @@
 
                     <div class='card p-3 mt-3'>
                         <div>
-                            <img class='mr-2 my-1' src='https://img.shields.io/badge/github-kodeinaja-brightgreen?logo=github&style=flat'>
-                            <img class='mr-2 my-1' src='https://img.shields.io/github/license/ricko-v/kodeinaja.svg'>
-                            <img class='mr-2 my-1' src='https://img.shields.io/github/issues-pr/ricko-v/kodeinaja.svg'>
-                            <img class='mr-2 my-1' src='https://img.shields.io/github/issues-pr-closed/ricko-v/kodeinaja.svg'>
+                            <img class='mr-2 my-1' alt='?' src='https://img.shields.io/badge/github-kodeinaja-brightgreen?logo=github&style=flat'>
+                            <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/license/ricko-v/kodeinaja.svg'>
+                            <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/issues-pr/ricko-v/kodeinaja.svg'>
+                            <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/issues-pr-closed/ricko-v/kodeinaja.svg'>
                         </div>
                     </div>
 
@@ -57,8 +57,8 @@
                     </div>
 
                     <infinite-loading spinner='waveDots' v-if='posts.length > 0' class='mt-5 pt-3' @infinite="infiniteScroll">
-                        <div slot="no-more"><small class='text-secondary'>sudah sampai dasar 👏👏</small></div>
-                        <div slot="no-results"></small></div>
+                        <div slot="no-more" class='d-flex justify-content-center mt-5'><small class='text-secondary'>sudah sampai dasar 👏👏</small></div>
+                        <div slot="no-results"></div>
                     </infinite-loading>
                 </div>
                 <div class='col-lg-2'></div>

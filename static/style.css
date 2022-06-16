@@ -13,7 +13,7 @@ input {
 }
 
 .bg-silver {
-    background-color: #dee3e8;
+    background-color: #e5e9f0;
 }
 
 a {
@@ -81,4 +81,8 @@ th {
 
 .table-data {
     color: white !important;
+}
+
+.my-editor pre {
+    color: silver !important;
 }

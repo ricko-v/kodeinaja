@@ -94,7 +94,8 @@
 export default {
     async asyncData({
         $content,
-        params
+        params,
+        error
     }) {
         let github, kosong;
         let n = 1;
@@ -123,7 +124,7 @@ export default {
 
     head() {
         return {
-            title: `${this.$route.params.username} - Kodeinaja`,
+            title: `${this.kosong ? "Not Found" : this.$route.params.username} - Kodeinaja`,
             meta: [{
                     hid: 'description',
                     name: 'description',
