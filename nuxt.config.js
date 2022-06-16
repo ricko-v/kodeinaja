@@ -43,13 +43,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/pwa',
-    ['nuxt-content-git', {
-      createdAtName: 'gitCreatedAt',
-      updatedAtName: 'gitUpdatedAt',
-    }],
-    // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/content
+    'nuxt-content-git',
     '@nuxt/content',
   ],
 
@@ -69,7 +64,9 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'KodeInaja'
+      name: 'KodeInaja',
+      short_name: 'KodeInaja',
+      theme_color: '#2F4F4F'
     }
   }
 }
