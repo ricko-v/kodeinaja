@@ -13,7 +13,7 @@ Pada postingan kali ini akan membahas tentang petunjuk penggunaan markdown untuk
 
 ## Heading
 
-Heading di markdown dibuat dengan awalan tanda baca "#" lalu diikui dengan teks yang akan dibuat. Jumlah "#" yang ditulis akan menentukan level heading yang dibuat (maksimal berjumlah 6).
+Heading di markdown dibuat dengan awalan tanda baca "#" lalu diikuti dengan teks yang akan dibuat. Jumlah "#" yang ditulis akan menentukan level heading yang dibuat (maksimal berjumlah 6).
 
 Contoh:
 
@@ -131,7 +131,7 @@ Hasil kode diatas:
 
 ## Link
 
-Untuk membuat link, teman-teman dapat menggunakan syntax [teks](link).
+Untuk membuat link, teman-teman dapat menggunakan syntax ```[teks](link)```.
 
 Contoh:
 
