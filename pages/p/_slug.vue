@@ -71,6 +71,7 @@
                   data-emit-metadata="0"
                   data-theme="light"
                   data-lang="en"
+                  data-loading="lazy"
                   crossorigin="anonymous"
                   async
                 ></script>
