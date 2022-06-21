@@ -42,10 +42,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-content-git',
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
-    '@nuxt/content',
+    '@nuxt/content'
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
