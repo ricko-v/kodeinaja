@@ -86,3 +86,8 @@ th {
 .my-editor pre {
     color: silver !important;
 }
+
+.btn-warning,
+.badge-warning {
+    color: #fff !important;
+}
