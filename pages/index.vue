@@ -24,6 +24,9 @@
                             <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/license/ricko-v/kodeinaja.svg'>
                             <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/issues-pr/ricko-v/kodeinaja.svg'>
                             <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/issues-pr-closed/ricko-v/kodeinaja.svg'>
+                            <a href='https://github.com/ricko-v/kodeinaja/releases/download/v.2.0.0/KodeInaja.apk'>
+                                <img class='mr-2 my-1' alt='?' src='https://img.shields.io/badge/download-aplikasi-blue?style=?style=for-the-badge&logo=android'>
+                            </a>
                         </div>
                     </div>
 

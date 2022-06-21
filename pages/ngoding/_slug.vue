@@ -16,7 +16,7 @@
                     </b-tab>
                     <b-tab title="JS">
                         <prism-editor class="my-editor shadow-sm min-vh-100" v-model="js" :highlight="highlighter"></prism-editor>
-                    </b-tab> 
+                    </b-tab>
                     <b-tab title="HASIL" @click='debug' class='fix-pt'>
                         <div id='nav-hasil'>
                             <iframe id='hasil' class='hasil border-0 w-100 min-vh-100' style='margin-bottom: -5px;'></iframe>
@@ -52,24 +52,17 @@ export default {
     components: {
         PrismEditor,
     },
-    async asyncData({ $content, params, error }) {
-        let kode = await $content("ngoding").where({ slug: params.slug }).fetch();
-
-        if (kode.length == 0) {
-            error({
-                statusCode: 404,
-                message: "404 Not Found",
-            });
-        } else {
-            let title = kode[0].title;
-            let html = kode[0]["html"][0].replace(/['^']/g," ");
-            html = html.replace(/[~]/g, "\n");
-
-            let css = kode[0]["css"][0].replace(/['^']/g," ");
-            css = css.replace(/[~]/g, "\n");
-
-            let js = kode[0]["js"][0].replace(/['^']/g," ");
-            js = js.replace(/[~]/g, "\n");
+    async asyncData({
+        $content,
+        params,
+        error
+    }) {
+        try {
+            let getKode = require('../../content/ngoding/' + params.slug + ".js").default;
+            let title = getKode['title'];
+            let html = getKode['html'];
+            let css = getKode['css'];
+            let js = getKode['js'];
 
             return {
                 title,
@@ -77,6 +70,11 @@ export default {
                 css,
                 js
             }
+        } catch (er) {
+            error({
+                statusCode: 404,
+                message: "404 Not Found",
+            });
         }
     },
     head() {
@@ -119,13 +117,14 @@ export default {
             navHasil.innerHTML = `<iframe id='hasil' class='hasil border-0 w-100 min-vh-100' style='margin-bottom: -5px;'></iframe>`;
             let iframe = document.getElementById('hasil').contentWindow.document;
             let html = this.html;
-            let css = "<style>" + this.css + "</style>";
+            let css = " <style>" + this.css + " </style>";
             let js = "<scri" + "pt>" + this.js + "</scri" + "pt>";
             let kode =
-`
+                `
 <!doctype html>
 <html lang="en">
-	<head>
+
+<head>
     	<meta charset="utf-8" />
     	<meta name="viewport" content="width=device-width, initial-scale=1" />
     	<title>Latihan Ngoding</title>
