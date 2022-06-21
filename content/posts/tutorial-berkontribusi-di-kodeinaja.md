@@ -4,6 +4,7 @@ description: "Tutotial tentang cara berkontribusi ke website ini."
 category: ["tutorial"]
 tag: ["github", "open-source"]
 username: ricko-v
+createdAt: 2022-6-21
 ---
 
 Halo teman-teman semua 👋.

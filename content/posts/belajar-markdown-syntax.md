@@ -4,6 +4,7 @@ description: Belajar penggunaan markdown untuk menulis postingan di kodeinaja
 tag: ["md", "guide", "markdown"]
 category: ["tutorial"]
 username: ricko-v
+createdAt: 2022-6-21
 ---
  
 Hallo teman-teman semua 👋
@@ -52,7 +53,7 @@ Untuk membuat paragraf, teman-teman bisa langsung menuliskan teks dan jika ingin
 
 Contoh:
 
-```
+```md
 Hallo semuanya
 
 Ini paragraf baru

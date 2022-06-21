@@ -9,10 +9,10 @@
                     <div class='card shadow-sm p-3'>
                         <h3 class=''>Showcase <b>Project</b> ✨</h3>
                         <p>
-                            Project keren-keren dari kiriman teman-teman semua.
+                            Kumpulan project dari kiriman teman-teman semua.
                             <br>
                             Pamerin juga project yang sudah kamu buat.
-                            <br>Belum tau caranya? ikutin langkah-langkahnya di <a href='/p/pamerin-project-kalian' target='_blank'>Pamerin Project Kalian</a>.
+                            <br>Ingin mengirim juga? kirim projectmu lewat <NuxtLink to='/showcase/add'>form showcase</NuxtLink>.
                         </p>
                     </div>
                     <div class='mt-5 pt-5'>
@@ -33,8 +33,8 @@
                         <div v-for='s in project' v-if='s.project.toLowerCase().search(q.toLowerCase()) !== -1' :key='s.project' class='col-md-6 col-lg-6 mb-5'>
                             <div class='card p-3 shadow-sm h-100'>
                                 <div class='card-img'>
-                                    <img v-if='!s.external_thumbnail' :src="'/showcase-img/'+s.local_thumbnail" class='img-fluid rounded'>
-                                    <img v-if='s.external_thumbnail' :src="s.external_thumbnail" class='img-fluid rounded'>
+                                    <img v-if='!s.external_thumbnail && s.local_thumbnail' :alt='s.project' :src="'/showcase-img/'+s.local_thumbnail" class='img-fluid rounded'>
+                                    <img v-if='s.external_thumbnail && !s.local_thumbnail' :alt='s.project' :src="s.external_thumbnail" class='img-fluid rounded'>
                                 </div>
                                 <div class='card-body p-0 mt-3'>
                                     <h5 class='font-weight-bold'>{{ s.project }}</h5>

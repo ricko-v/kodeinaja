@@ -8,4 +8,5 @@ tag: ['nuxt', 'vue', 'pwa', 'makanan']
 url: https://masak-apa.surge.sh
 download:
 repository: masak-apa
+createdAt: 2022-6-21
 ---

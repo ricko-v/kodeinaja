@@ -263,12 +263,19 @@ export default {
             });
 
             const slug = this.generateSlug(this.judul);
+            let d = new Date();
+            let thn = d.getFullYear();
+            let tgl = d.getDate();
+            let bln = d.getMonth() + 1;
+            d = thn + "-" + bln + "-" + tgl;
+
             const konten = `---
 title: ${this.judul}
 description: ${this.deskripsi}
 tag: ${this.generateArr(this.tag)}
 category: ${this.generateArr(this.kategori)}
 username: ${this.username}
+createdAt: ${d}
 ---
 
 ${easymde.value()}

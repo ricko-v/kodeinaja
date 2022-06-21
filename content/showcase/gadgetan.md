@@ -8,4 +8,5 @@ tag: ['nuxt', 'vue', 'firebase', 'landing-page']
 url: https://gadgetan-r.web.app
 download:
 repository:
+createdAt: 2022-6-21
 ---
