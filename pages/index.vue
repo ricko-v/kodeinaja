@@ -19,7 +19,7 @@
                     </div>
 
                     <div class='card p-3 mt-3'>
-                        <div>
+                        <div class='text-center'>
                             <img class='mr-2 my-1' alt='?' src='https://img.shields.io/badge/github-kodeinaja-brightgreen?logo=github&style=flat'>
                             <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/license/ricko-v/kodeinaja.svg'>
                             <img class='mr-2 my-1' alt='?' src='https://img.shields.io/github/issues-pr/ricko-v/kodeinaja.svg'>
