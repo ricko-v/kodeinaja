@@ -1,5 +1,9 @@
-# Kodeinaja
-Blog sederhana tentang koding atau pemrograman.
+<div align="center">
+ 
+# KodeInaja
+![Author](https://img.shields.io/badge/Author-ricko%20veriyanto-blue.svg?style=for-the-badge&logo=github)
+<p>Blog web app yang membahas tentang tutorial koding atau pemrograman.</p>
+</div>
 
 # install setup
 ```sh
