@@ -30,6 +30,13 @@
                         </div>
                     </div>
 
+                    <div v-if='status == "update"' class='card p-3 mt-3'>
+                        <div class='d-flex justify-content-between align-items-center'>
+                        <b>Ada postingan terbaru!</b>
+                        <button @click="refresh" class='btn btn-success shadow-none'>Refresh</button>
+                        </div>
+                    </div>
+
                     <div class='mt-5 pt-5'>
                         <hr class='border border-secondary'>
                     </div>
@@ -76,17 +83,44 @@
 export default {
     async asyncData({
         $content,
+        $workbox,
         params
     }) {
         const posts = await $content('posts').limit(7).only(['title', 'slug', 'createdAt', 'username', 'description', 'tag']).sortBy('createdAt', 'desc').fetch()
         const n = 1;
+        let status = '';
         return {
             posts,
-            n
+            n,
+            status
         }
+    },
+    mounted() {
+        this.cek_update();
     },
 
     methods: {
+        refresh() {
+            window.location.reload();
+        },
+        async cek_update() {
+            const workbox = await window.$workbox
+
+            if (!workbox) {
+                this.status = 'offline';
+                return
+            }
+
+            workbox.addEventListener('installed', (event) => {
+                if (!event.isUpdate) {
+                    this.status = 'latest';
+                    return
+                }
+
+                this.status = 'update';
+                //window.location.reload();
+            })
+        },
         gachaWarna() {
             let warna = ['dark', 'warning', 'danger', 'success'];
             let gacha = Math.floor(Math.random() * warna.length);
