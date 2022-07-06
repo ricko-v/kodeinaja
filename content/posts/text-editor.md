@@ -1,5 +1,5 @@
 ---
-title: HTML #2: Text Editor
+title: 'HTML #2: Text Editor'
 description: Software yang bisa digunakan untuk membuat file html dan ngoding.
 tag: ["html","html-dasar", "text-editor"]
 category: ["html"]
