@@ -270,8 +270,8 @@ export default {
             d = thn + "-" + bln + "-" + tgl;
 
             const konten = `---
-title: ${this.judul}
-description: ${this.deskripsi}
+title: '${this.judul}'
+description: '${this.deskripsi}'
 tag: ${this.generateArr(this.tag)}
 category: ${this.generateArr(this.kategori)}
 username: ${this.username}
