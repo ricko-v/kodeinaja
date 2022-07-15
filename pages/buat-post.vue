@@ -300,7 +300,7 @@ ${easymde.value()}
         },
 
         generateSlug(judul) {
-            return judul.toLowerCase().replace(/[' ']/g, '-');
+            return encodeURIComponent(judul.toLowerCase().replace(/[' ']/g, '-'));
         },
 
         clearStorage() {
