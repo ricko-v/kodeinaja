@@ -2,7 +2,7 @@
 title: 'CI-4 #2: Controller dan Routing'
 description: 'Belajar controller dan routing di codeigniter 4'
 tag: ["ci-4","codeigniter"]
-category: ["codeigniter"]
+category: ["codeigniter-4"]
 username: ricko-v
 createdAt: 2022-7-15
 ---
