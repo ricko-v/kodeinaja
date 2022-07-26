@@ -140,7 +140,7 @@ Buka folder **routes** dan buka file web.php. Edit bagian router menjadi seperti
 
 ```php
 Route::get('/{any}', function() {
-  views("welcome");
+  return view("welcome");
 })->where('any','.*');
 ```
 
