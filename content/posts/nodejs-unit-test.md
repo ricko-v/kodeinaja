@@ -3,11 +3,11 @@ title: NodeJS Unit Test
 description: Cara membuat kode program yang baik dengan  unit test
 tag: ["nodejs", "unit-test"]
 category: ["tutorial"]
-username: Aji Maulana
+username: mancode77
 createdAt: 2022-7-29
 ---
 
-Pada postingan kali ini akan memmbahas NodeJS Unit Test. Materi ini dari chanel youtube [Programmer Zaman Now](https://www.youtube.com/playlist?list=UU14ZKB9XsDZbnHVmr4AmUpQ)
+Pada postingan kali ini akan membahas NodeJS Unit Test. Materi ini dari chanel youtube [Programmer Zaman Now](https://www.youtube.com/playlist?list=UU14ZKB9XsDZbnHVmr4AmUpQ)
 
 Sebelum belajar **NodeJS Unit Test** disarankan untuk mempelajari [Javascript](https://developer.mozilla.org/) dan [NodeJS](https://nodejs.org/) dasar terlebih dahulu!.
 
@@ -33,7 +33,7 @@ Jest digunakan untuk membuat unit test saja, sehingga kita tidak perlu menambahk
 $ npm install jest --save-dev
 ```
 
-[Jest-pacakge] (https://www.npmjs.com/package/jest 
+[Jest-pacakge](https://www.npmjs.com/package/jest 
 )
 
 ### Kode package.json
