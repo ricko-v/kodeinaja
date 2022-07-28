@@ -128,7 +128,7 @@ export default {
         },
 
         async infiniteScroll($state) {
-            let dataBaru = await this.$content('posts').skip(7 * this.n).limit(7).only(['title', 'slug', 'createdAt', 'username', 'category', 'description', 'category']).sortBy('createdAt', 'desc').fetch();
+            let dataBaru = await this.$content('posts').skip(7 * this.n).limit(7).only(['title', 'slug', 'createdAt', 'username', 'category', 'description', 'tag']).sortBy('createdAt', 'desc').fetch();
             this.n++;
 
             if (dataBaru.length == 0) {
