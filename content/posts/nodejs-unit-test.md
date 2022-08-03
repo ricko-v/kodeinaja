@@ -14,6 +14,9 @@ Sebelum belajar **NodeJS Unit Test** disarankan untuk mempelajari [Javascript](h
 # Pengenalan Software Testing
 Software testing adalah salah satu disiplin ilmu dalam software testing. Tujuan utama dari software testing adalah memastikan kualitas kode aplikasi baik. Ilmu untuk software testing sangat luas, pada materi ini kita hanya akan fokus ke unit testing.
 
+# Unit Test
+Unit Test adalah proses pengujian kode program terkecil, untuk meningkatkan kualitas kode program, sebagai contoh biasanya menguji sebuah method.
+
 # Pengenalan Jest
 Jest adalah salah satu library untuk unit test NodeJS yang sangat populer. Jest sendiri dibuat oleh Facebook. Jest terintegrasi sangat baik dengan banyak teknologi seperti NodeJS, ReactJS, VueJS, dan lain-lain. Jest fokus pada kesederhanaan, sehingga penggunaannya sangat mudah untuk pemula yang ingin mencoba unit test.
 
@@ -23,6 +26,22 @@ Jest adalah salah satu library untuk unit test NodeJS yang sangat populer. Jest 
 
 ```
 $ npm init
+```
+
+## Kode: package.json
+```JSON
+{
+ "name": "belajar-nodejs-unit-test",
+ "version": "1.0.0",
+ "description": "Belajar",
+ "main": "./src/index.js",
+ "type": "module",
+ "scripts": {
+     "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "author": "author",
+ "licenses": "ISC"
+}
 ```
 
 # Menginstall Jest
@@ -36,7 +55,7 @@ $ npm install jest --save-dev
 [Jest-pacakge](https://www.npmjs.com/package/jest 
 )
 
-### Kode package.json
+## Kode: package.json
 
 ```JSON
 {
@@ -55,4 +74,64 @@ $ npm install jest --save-dev
  }
 }
 ```
-next....
+
+## Program Jest
+
+```
+belajar-nodejs-unit-test
+|   node_modules
+│
+└───.bin
+    │   ....
+    │   ....
+    |   ....
+    │   jest
+```
+
+# Menjalankan Unit Test
+Untuk menjalankan unit test menggunakan Jest, kita bisa jalankan file jest yang ada di **node_modules/.bin/jest**. 
+
+Tapi kita bisa permudah menggunakan script di package, cukup ketikkan kode program nya saja di bagian **script test**.
+
+## Kode: package.json
+
+```JSON
+{
+ "name": "belajar-nodejs-unit-test",
+ "version": "1.0.0",
+ "description": "Belajar",
+ "main": "./src/index.js",
+ "type": "module",
+ "scripts": {
+     "test": "jest"
+ },
+ "author": "author",
+ "licenses": "ISC",
+ "devDepedencies": {
+     "jest": "^28.1.0"
+ }
+}
+```
+
+## Kode: Menjalankan Unit Test
+
+```
+> <span style="color:green">belajar-nodejs-unit-test</span> npm test
+
+
+> belajar-nodejs-unit-test@1.0.0 test
+> jest
+
+
+<span style="font-weight: 700">No test found, exiting with code 1</span>
+Run with `passWithNoTest` to exit with code 0
+In /home/user/Documents/belajar/nodejs/belajar-nodejs-unit-test
+  2 files checked
+  testMatch: <span style="color: gold">**/__test__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x)</span> - 0 matches
+  testPathIgnorePatterns: <span style="color: gold">/node_modules/</span> - 2 matches
+  testRegex: - 0 matches
+Pattern: - 0 matches
+> <span style="color:green">belajar-nodejs-unit-test</span>
+```
+
+next ...
