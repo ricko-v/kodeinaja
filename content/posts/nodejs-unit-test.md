@@ -23,7 +23,6 @@ Jest adalah salah satu library untuk unit test NodeJS yang sangat populer. Jest 
 [Jest](https://jestjs.io/)
 
 # Membuat Project
-
 ```
 $ npm init
 ```
@@ -45,7 +44,6 @@ $ npm init
 ```
 
 # Menginstall Jest
-
 Jest digunakan untuk membuat unit test saja, sehingga kita tidak perlu menambahkan sebagai dependency production. Kita cukup tambahkan sebagai development dependency. Kita bisa tambahkan di package.json atau gunakan perintah : 
 
 ```
@@ -56,7 +54,6 @@ $ npm install jest --save-dev
 )
 
 ## Kode: package.json
-
 ```JSON
 {
  "name": "belajar-nodejs-unit-test",
@@ -76,7 +73,6 @@ $ npm install jest --save-dev
 ```
 
 ## Program Jest
-
 ```
 belajar-nodejs-unit-test
 |   node_modules
@@ -94,7 +90,6 @@ Untuk menjalankan unit test menggunakan Jest, kita bisa jalankan file jest yang 
 Tapi kita bisa permudah menggunakan script di package, cukup ketikkan kode program nya saja di bagian **script test**.
 
 ## Kode: package.json
-
 ```JSON
 {
  "name": "belajar-nodejs-unit-test",
@@ -114,7 +109,6 @@ Tapi kita bisa permudah menggunakan script di package, cukup ketikkan kode progr
 ```
 
 ## Kode: Menjalankan Unit Test
-
 ```
 > <span style="color:green">belajar-nodejs-unit-test</span> npm test
 
@@ -134,4 +128,52 @@ Pattern: - 0 matches
 > <span style="color:green">belajar-nodejs-unit-test</span>
 ```
 
-next ...
+# Membuat Unit Test
+Jest sudah menyediakan function yang diintegrasikan secara global bernama **test()**, function tersebut digunakan untuk membuat unit test. Function **test()** memiliki parameter nama unit test dan juga function yang berisi kode unit test nya.
+
+## Struktur Folder Tanpa Unit Test
+```
+belajar-nodejs-unit-test
+│   node_modules
+└───src
+|    |   sum.js
+|
+│   package.json
+|   package-lock.json
+```
+
+## Kode: Sum Function
+```js
+    'use strict'
+
+    export const sum = (first, second) => {
+        return first + second;
+    }
+```
+
+## Struktur Folder Dengan Unit Test
+```
+belajar-nodejs-unit-test
+│   node_modules
+└───src
+|   |   sum.js
+|
+└───test
+|   |   sum.test.js
+|
+│   package.json
+|   package-lock.json
+```
+
+## Kode: Test Sum Function
+```js
+    'use strict'
+    
+    import { sum } from './../src/sum.js';
+
+    test('sum(1, 2) mus be 3', () => {
+        const result = sum(1, 2);
+
+        expect(result).toBe(3);
+    });
+```
