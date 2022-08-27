@@ -48,7 +48,17 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     'bootstrap-vue/nuxt',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap',
+    'nuxt-compress',
+    {
+      gzip: {
+        threshold: 8192,
+      },
+      brotli: {
+        threshold: 8192,
+      },
+    },
   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
@@ -71,5 +81,10 @@ export default {
       short_name: 'KodeInaja',
       theme_color: '#2F4F4F'
     }
+  },
+
+  sitemap: {
+    hostname: 'https://www.kodeinaja.my.id',
+    gzip: true
   }
 }
