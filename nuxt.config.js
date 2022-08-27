@@ -51,15 +51,16 @@ export default {
     '@nuxt/content',
     '@nuxtjs/sitemap',
     'nuxt-compress',
-    {
-      gzip: {
-        threshold: 8192,
-      },
-      brotli: {
-        threshold: 8192,
-      },
-    },
   ],
+
+  'nuxt-compress': {
+    gzip: {
+      threshold: 8192,
+    },
+    brotli: {
+      threshold: 8192,
+    },
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
