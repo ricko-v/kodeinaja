@@ -5,6 +5,9 @@ export default {
     color: '#1c7ed6',
     height: '3px'
   },
+  router: {
+    base: '/kodeinaja'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'KodeInaja - Belajar koding dari dasar',
