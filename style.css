@@ -1,0 +1,93 @@
+html,
+body {
+    scroll-behavior: smooth !important;
+}
+
+* {
+    outline: none !important;
+}
+
+button,
+input {
+    outline: none !important;
+}
+
+.bg-silver {
+    background-color: #e5e9f0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.nuxt-content table {
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    border: 1px solid silver;
+    border-radius: 5px !important;
+}
+
+.nuxt-content tr,
+td,
+th {
+    padding: 10px !important;
+    border: 1px solid silver;
+}
+
+.nuxt-content {
+    word-spacing: 3px !important;
+}
+
+.nuxt-content th {
+    text-align: center !important;
+}
+
+.nuxt-content img {
+    max-width: 100% !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    max-height: 400px !important;
+    border-radius: 2px !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.nuxt-content h1,
+.nuxt-content h2,
+.nuxt-content h3,
+.nuxt-content h4,
+.nuxt-content h5,
+.nuxt-content h6 {
+    border-left: 3px solid grey !important;
+    padding-left: 15px !important;
+    margin-top: 50px !important;
+    margin-bottom: 20px !important;
+}
+
+.nuxt-content-highlight {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+}
+
+.img-avatar {
+    width: 130px;
+    height: 130px;
+}
+
+.EasyMDEContainer img {
+    max-width: 100% !important;
+}
+
+.table-data {
+    color: white !important;
+}
+
+.my-editor pre {
+    color: silver !important;
+}
+
+.btn-warning,
+.badge-warning {
+    color: #fff !important;
+}
