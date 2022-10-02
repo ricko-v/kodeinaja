@@ -5,8 +5,6 @@
 <p>Blog web app yang membahas tentang tutorial koding atau pemrograman.</p>
 </div>
 
-# Sedang Diperbaiki...
-
 # install setup
 ```sh
 $ npm install
