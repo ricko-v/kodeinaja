@@ -21,8 +21,12 @@ $ npm run generate
 ```
 
 # add post
+Cara pertama:
+Teman-teman bisa menggunakan form di [https://kodeinaja.my.id/buat-post](https://kodeinaja.my.id/buat-post)
+
+Cara kedua:
 Buat file judul-postingan.md baru di folder ```content/post```
-dan isikan dengan
+dan isikan dengan script dibawah.
 
 ```
 ---
@@ -33,3 +37,28 @@ tag: ['nodejs', 'cli']
 username: username github
 ---
 ```
+
+# add showcase project
+Cara pertama:
+Teman-teman bisa menggunakan form di [https://kodeinaja.my.id/showcase/add](https://kodeinaja.my.id/showcase/add)
+
+Cara kedua:
+Buat file nama-project.md baru di folder ```content/showcase```
+dan isikan dengan script dibawah.
+
+```
+---
+username: ricko-v
+project: Katanime
+description: Kumpulan kata-kata dari karakter anime.
+local_thumbnail: katanime.png
+external_thumbnail:
+tag: ['nuxt', 'vue', 'pwa', 'vercel', 'anime']
+url: https://katanime.vercel.app
+download: https://github.com/ricko-v/katanime/releases/download/QuotesAnime/Katanime.apk
+repository: katanime
+createdAt: 2022-6-21
+---
+```
+
+Note: kosongin aja kalau semisal tidak ada datanya.
