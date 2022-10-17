@@ -10,11 +10,11 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  
+
 jobs:
   cd:
     runs-on: ${{ matrix.os }}
-      
+
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -30,10 +30,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
       - name: Generate
-        run: yarn generate
+        run: npm run generate
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
