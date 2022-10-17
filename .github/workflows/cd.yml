@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   cd:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
