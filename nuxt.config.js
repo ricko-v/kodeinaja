@@ -77,14 +77,14 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extractCSS: true,
-    postcss: {
-      plugins: [
-        purgecss({
-          content: ['./pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue'],
-          whitelist: ['html', 'body'],
-        })
-      ]
-    }
+    // postcss: {
+    //   plugins: [
+    //     purgecss({
+    //       content: ['./pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue'],
+    //       whitelist: ['html', 'body'],
+    //     })
+    //   ]
+    // }
   },
 
   pwa: {
