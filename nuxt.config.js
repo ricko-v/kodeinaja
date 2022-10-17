@@ -1,3 +1,5 @@
+import purgecss from '@fullhuman/postcss-purgecss'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -74,6 +76,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true,
+    postcss: {
+      plugins: [
+        purgecss({
+          content: ['./pages/**/*.vue', './layouts/**/*.vue', './components/**/*.vue'],
+          whitelist: ['html', 'body'],
+        })
+      ]
+    }
   },
 
   pwa: {

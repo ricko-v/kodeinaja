@@ -10,6 +10,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "bootstrap": "^4.6.1",
